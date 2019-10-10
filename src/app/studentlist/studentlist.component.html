@@ -1,0 +1,14 @@
+<p>Students:</p>
+<ul *ngFor="let student of getStudents()">
+    <li>{{student.name}},{{student.grade}},{{student.studentNumber}}</li>
+</ul>
+<p>
+    <input #studentNumber placeholder="studentNbr">
+    <input #name placeholder="name">
+    <input #grade placeholder="grade">
+    <button (click)="addStudent(studentNumber.value, name.value, grade.value)">Add student</button>
+</p>
+<p><button (click)="deleteStudent(studentNumber)">Delete student</button></p>
+
+<p><button (click)="updateStudents()">Update student</button></p>
+<p></p>
